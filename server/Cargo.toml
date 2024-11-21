@@ -1,9 +1,0 @@
-[package]
-name = "server"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
-actix-web = "4.9.0"
-dotenv = "0.15.0"
-openai_api_rust = "0.1.9"
