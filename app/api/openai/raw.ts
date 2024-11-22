@@ -1,4 +1,3 @@
-import { OpenAiRawRequestParams } from "@/misc/apiRoutes";
 import { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 const openai = new OpenAI();
@@ -18,3 +17,11 @@ const _handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     res.status(200).json({ data: completion.choices[0].message });
 };
+
+export interface OpenAiRawRequestParams {
+    prompt: string;
+}
+
+export interface OpenAiRawResponseParams {
+    data: string;
+}
